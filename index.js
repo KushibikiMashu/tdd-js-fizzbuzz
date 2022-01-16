@@ -1,4 +1,9 @@
 function fizzBuzz(num) {
+  const typename = typeof num;
+  if (typename !== 'number') {
+    throw new Error(`Invalid type argument: ${typename}`);
+  }
+
   const canDivideByThree = num % 3 === 0;
   const canDivideByFive = num % 5 === 0;
 

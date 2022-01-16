@@ -27,3 +27,17 @@ describe('15の倍数を渡すと「FizzBuzz」を返す', () => {
     expect(fizzBuzz(15)).toBe('FizzBuzz');
   });
 });
+
+describe('数値以外の値を渡したとき、例外を発生させる', () => {
+  // const getErrorMessage = ()
+
+  test('文字列argを渡すとエラーを発生させる', () => {
+    expect(() => fizzBuzz('arg')).toThrow('Invalid type argument: string');
+  });
+
+  test('undefined を渡すとエラーを発生させる', () => {
+    expect(() => fizzBuzz(undefined)).toThrow(
+      'Invalid type argument: undefined'
+    );
+  });
+});
