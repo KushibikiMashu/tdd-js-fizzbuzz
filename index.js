@@ -8,8 +8,8 @@ function fizzBuzz(num) {
     throw new Error(`Invalid type argument: ${typename}`);
   }
 
-  const canDivideByThree = num % 3 === 0;
-  const canDivideByFive = num % 5 === 0;
+  const canDivideByThree = canDivideBy(num, 3);
+  const canDivideByFive = canDivideBy(num, 5);
 
   if (canDivideByThree && canDivideByFive) {
     return 'FizzBuzz';
