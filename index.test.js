@@ -1,4 +1,14 @@
-const fizzBuzz = require('./index');
+const { canDivideBy, fizzBuzz } = require('./index');
+
+describe('倍数を判定する', () => {
+  test('分子に6、分母に3を渡すと true を返す', () => {
+    expect(canDivideBy(6, 3)).toBeTruthy();
+  });
+
+  test('分子に5、分母に2を渡すと false を返す', () => {
+    expect(canDivideBy(5, 2)).toBeFalsy();
+  });
+});
 
 describe('数を文字列に変換する', () => {
   test("1を渡すと文字列'1'を返す", () => {

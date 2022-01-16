@@ -1,3 +1,7 @@
+function canDivideBy(numerator, denominator) {
+  return numerator % denominator === 0;
+}
+
 function fizzBuzz(num) {
   const typename = typeof num;
   if (typename !== 'number') {
@@ -17,4 +21,4 @@ function fizzBuzz(num) {
   return num.toString();
 }
 
-module.exports = fizzBuzz;
+module.exports = { canDivideBy, fizzBuzz };
