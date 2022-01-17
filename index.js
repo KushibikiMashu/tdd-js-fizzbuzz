@@ -1,4 +1,8 @@
 function canDivideBy(numerator, denominator) {
+  if (denominator === 0) {
+    throw new Error('Invalid argument: denominator is 0.');
+  }
+
   return numerator % denominator === 0;
 }
 

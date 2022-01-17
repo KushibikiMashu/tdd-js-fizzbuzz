@@ -10,6 +10,14 @@ describe('canDivideBy', () => {
       expect(canDivideBy(5, 2)).toBeFalsy();
     });
   });
+
+  describe('分母に渡してはいけない値を渡すとエラーを発生させる', () => {
+    test('分母に0を渡すとエラーを発生させる', () => {
+      expect(() => canDivideBy(1, 0)).toThrow(
+        'Invalid argument: denominator is 0.'
+      );
+    });
+  });
 });
 
 describe('fizzBuzz', () => {
