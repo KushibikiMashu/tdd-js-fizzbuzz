@@ -21,7 +21,7 @@ describe('canDivideBy', () => {
 });
 
 describe('fizzBuzz', () => {
-  describe('数を文字列に変換する', () => {
+  describe('数値を文字列に変換する', () => {
     test("1を渡すと文字列'1'を返す", () => {
       expect(fizzBuzz(1)).toBe('1');
     });
@@ -32,13 +32,13 @@ describe('fizzBuzz', () => {
   });
 
   describe('3の倍数を渡すと「Fizz」を返す', () => {
-    test("3を渡すと文字列'Fizz'を返す", () => {
+    test("3を渡すと文字列「Fizz」を返す", () => {
       expect(fizzBuzz(3)).toBe('Fizz');
     });
   });
 
   describe('5の倍数を渡すと「Buzz」を返す', () => {
-    test("5を渡すと文字列'Buzz'を返す", () => {
+    test("5を渡すと文字列「Buzz」を返す", () => {
       expect(fizzBuzz(5)).toBe('Buzz');
     });
   });
