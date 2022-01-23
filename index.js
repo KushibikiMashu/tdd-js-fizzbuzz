@@ -1,19 +1,6 @@
-function canDivideBy(numerator, denominator) {
-  if (denominator === 0) {
-    throw new Error('Invalid argument: denominator is 0.');
-  }
-
-  return numerator % denominator === 0;
-}
-
 function fizzBuzz(num) {
-  const typename = typeof num;
-  if (typename !== 'number') {
-    throw new Error(`Invalid type argument: ${typename}`);
-  }
-
-  const canDivideByThree = canDivideBy(num, 3);
-  const canDivideByFive = canDivideBy(num, 5);
+  const canDivideByThree = num % 3 === 0;
+  const canDivideByFive = num % 5 === 0;
 
   if (canDivideByThree && canDivideByFive) {
     return 'FizzBuzz';
@@ -25,4 +12,4 @@ function fizzBuzz(num) {
   return num.toString();
 }
 
-module.exports = { canDivideBy, fizzBuzz };
+module.exports = fizzBuzz;
